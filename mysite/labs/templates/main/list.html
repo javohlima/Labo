@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+{% block title %}
+Поиск проекта
+{% endblock %}
+
+{% block content %}
+    <h1>Поиск проекта</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ from.title }}
+        {{ form.task }}<br>
+        <button type="submit" class="btn btn-succes">Поиск</button>
+    </form>
+{% endblock %}
